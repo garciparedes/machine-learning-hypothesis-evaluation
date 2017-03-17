@@ -49,25 +49,61 @@
 			[TODO ]
 
 			\begin{itemize}
-				\item \textbf{Soybean}\cite{dataset:soybean}:
 				\item \textbf{Labor}\cite{dataset:labor}:
+				\item \textbf{Soybean}\cite{dataset:soybean}:
 				\item \textbf{Vote}\cite{dataset:vote}:
 			\end{itemize}
 
-	\section{Realizar un experimento aplicando Holdout $\frac{2}{3}/\frac{1}{3}$}
+	\section{Realizar un experimento aplicando Holdout $\tfrac{2}{3}/\tfrac{1}{3}$}
 	\label{sec:e1}
 
 		\paragraph{}
 		[TODO ]
 
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{ | c | c | c | }
+				\hline
+				\multicolumn{3}{ | c | }{Holdout $2/3,1/3$} \\ \hline
+				\multirow{2}{*}{Datos}		&\multirow{2}{*}{Algoritmo}	 	& Tasa de Error \\ \cline{3-3}
+				 													&  														& $S_0$  \\ \hline
+				\multirow{2}{*}{Labor} 		& J48 												& 0 \\ \cline{2-3}
+																	& JRIP												&	0	\\ \hline
+				\multirow{2}{*}{Soybean} 	& J48 												& 0 \\ \cline{2-3}
+																	& JRIP												&	0	\\ \hline
+				\multirow{2}{*}{Vote} 		& J48 												& 0 \\ \cline{2-3}
+																	& JRIP												&	0	\\
+				\hline
+			\end{tabular}
+			\caption{}
+			\label{}
+		\end{table}
 
-	\section{Realizar tres experimentos adicionales aplicando Holdout $\frac{2}{3}/\frac{1}{3}$, anotando la tasa de error de cada experimento}
+
+	\section{Realizar tres experimentos adicionales aplicando Holdout $\tfrac{2}{3}/\tfrac{1}{3}$, anotando la tasa de error de cada experimento}
 	\label{sec:e2}
 
 		\paragraph{}
 		[TODO ]
 
-
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{ | c | c | c | c | c | }
+				\hline
+				\multicolumn{5}{ | c | }{Holdout $2/3,1/3$ Repetido} \\ \hline
+				\multirow{2}{*}{Datos}		&\multirow{2}{*}{Algoritmo}	 	& \multicolumn{3}{ c |}{Tasa de Error} \\ \cline{3-5}
+				 													&  														& Semilla 1	& Semilla 2	& Semilla 3 \\ \hline
+				\multirow{2}{*}{Labor} 		& J48 												& 0 				& 0 				& 0 				\\ \cline{2-5}
+																	& JRIP												&	0 				& 0 				& 0 				\\ \hline
+				\multirow{2}{*}{Soybean} 	& J48 												& 0 				& 0 				& 0 				\\ \cline{2-5}
+																	& JRIP												&	0 				& 0 				& 0					\\ \hline
+				\multirow{2}{*}{Vote} 		& J48 												& 0 				& 0 				& 0 				\\ \cline{2-5}
+																	& JRIP												&	0 				& 0 				& 0					\\
+				\hline
+			\end{tabular}
+			\caption{}
+			\label{}
+		\end{table}
 
 	\section{Sobre los resultados calculados en la sección \ref{sec:e2} determinarla tasa de error, la varianza y el intervalo de confianza del $95\%$}
 	\label{sec:e3}
@@ -75,18 +111,73 @@
 		\paragraph{}
 		[TODO ]
 
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{ | c | c | c | c | c | }
+				\hline
+				\multicolumn{5}{ | c | }{Holdout $2/3,1/3$: Global } \\ \hline
+				Datos											& Algoritmo	 									& Tasa de Error	& Desviación Estandar	& Intervalos \\ \hline
+				\multirow{2}{*}{Labor} 		& J48 												& 0 		& 0 		& 0 		\\ \cline{2-5}
+																	& JRIP												&	0 		& 0 		& 0 		\\ \hline
+				\multirow{2}{*}{Soybean} 	& J48 												& 0 		& 0 		& 0 		\\ \cline{2-5}
+																	& JRIP												&	0 		& 0 		& 0			\\ \hline
+				\multirow{2}{*}{Vote} 		& J48 												& 0 		& 0 		& 0 		\\ \cline{2-5}
+																	& JRIP												&	0 		& 0 		& 0			\\
+				\hline
+			\end{tabular}
+			\caption{}
+			\label{}
+		\end{table}
+
 	\section{Realizar un experimento de validación cruzada de $10$ particiones, calculando la tasa de error}
 	\label{sec:e4}
 
 		\paragraph{}
 		[TODO ]
 
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{ | c | c | c | }
+				\hline
+				\multicolumn{3}{ | c | }{Validación Cruzada} \\ \hline
+				\multirow{2}{*}{Datos}		&\multirow{2}{*}{Algoritmo}	 	& Tasa de Error \\ \cline{3-3}
+																	&  														& $S_0$  \\ \hline
+				\multirow{2}{*}{Labor} 		& J48 												& 0 \\ \cline{2-3}
+																	& JRIP												&	0	\\ \hline
+				\multirow{2}{*}{Soybean} 	& J48 												& 0 \\ \cline{2-3}
+																	& JRIP												&	0	\\ \hline
+				\multirow{2}{*}{Vote} 		& J48 												& 0 \\ \cline{2-3}
+																	& JRIP												&	0	\\
+				\hline
+			\end{tabular}
+			\caption{}
+			\label{}
+		\end{table}
 
 	\section{Realizar tres experimentos de validación cruzada de $10$ particiones, anotando la tasa de error}
 	\label{sec:e5}
 
 		\paragraph{}
 		[TODO ]
+
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{ | c | c | c | c | c | }
+				\hline
+				\multicolumn{5}{ | c | }{Validación Cruzada Repetida} \\ \hline
+				\multirow{2}{*}{Datos}		&\multirow{2}{*}{Algoritmo}	 	& \multicolumn{3}{ c |}{Tasa de Error} \\ \cline{3-5}
+				 													&  														& Semilla 1	& Semilla 2	& Semilla 3 \\ \hline
+				\multirow{2}{*}{Labor} 		& J48 												& 0 				& 0 				& 0 				\\ \cline{2-5}
+																	& JRIP												&	0 				& 0 				& 0 				\\ \hline
+				\multirow{2}{*}{Soybean} 	& J48 												& 0 				& 0 				& 0 				\\ \cline{2-5}
+																	& JRIP												&	0 				& 0 				& 0					\\ \hline
+				\multirow{2}{*}{Vote} 		& J48 												& 0 				& 0 				& 0 				\\ \cline{2-5}
+																	& JRIP												&	0 				& 0 				& 0					\\
+				\hline
+			\end{tabular}
+			\caption{}
+			\label{}
+		\end{table}
 
 
 	\section{Sobre los resultados calculados en la sección \ref{sec:e5} determinarla tasa de error}
@@ -95,18 +186,50 @@
 		\paragraph{}
 		[TODO ]
 
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{ | c | c | c | }
+				\hline
+				\multicolumn{3}{ | c | }{Validación Cruzada Repetida: Global} \\ \hline
+				Datos											& Algoritmo	& Tasa de Error \\ \hline
+				\multirow{2}{*}{Labor} 		& J48 			& 0 \\ \cline{2-3}
+																	& JRIP			&	0	\\ \hline
+				\multirow{2}{*}{Soybean} 	& J48 			& 0 \\ \cline{2-3}
+																	& JRIP			&	0	\\ \hline
+				\multirow{2}{*}{Vote} 		& J48 			& 0 \\ \cline{2-3}
+																	& JRIP			&	0	\\
+				\hline
+			\end{tabular}
+			\caption{}
+			\label{}
+		\end{table}
+
 	\section{Conclusiones}
 	\label{sec:conclusions}
 
 		\paragraph{}
 		[TODO ]
 
+		\begin{table}[h]
+			\centering
+			\begin{tabular}{ | c || c | c | c | c |}
+			\hline
+			Algoritmo	&	Holdout & Holdout Repetido 	& Validación Cruzada 	& Validación Cruzada Repetida \\ \hline \hline
+			J48				&	0				&	0									&	0										&	0														\\ \hline
+			JRIP			& 0				&	0									&	0										&	0														\\
+			\hline
+			\end{tabular}
+			\caption{}
+			\label{}
+
+		\end{table}
 %-----------------------------
 %	Bibliographic references
 %-----------------------------
+	\nocite{garciparedes:machine-learning-hypothesis-evaluation}
 	\nocite{subject:taa}
 	\nocite{tool:weka}
-  \bibliographystyle{acm}
+  \bibliographystyle{alpha}
   \bibliography{bib/misc}
 
 \end{document}
