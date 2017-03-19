@@ -1,0 +1,142 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1
+Relation:     soybean
+Instances:    683
+Attributes:   36
+              date
+              plant-stand
+              precip
+              temp
+              hail
+              crop-hist
+              area-damaged
+              severity
+              seed-tmt
+              germination
+              plant-growth
+              leaves
+              leafspots-halo
+              leafspots-marg
+              leafspot-size
+              leaf-shread
+              leaf-malf
+              leaf-mild
+              stem
+              lodging
+              stem-cankers
+              canker-lesion
+              fruiting-bodies
+              external-decay
+              mycelium
+              int-discolor
+              sclerotia
+              fruit-pods
+              fruit-spots
+              seed
+              mold-growth
+              seed-discolor
+              seed-size
+              shriveling
+              roots
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(leaf-malf = present) and (stem = abnorm) => class=herbicide-injury (8.0/0.0)
+(fruit-pods = few-present) => class=cyst-nematode (14.0/0.0)
+(shriveling = present) and (stem-cankers = absent) => class=diaporthe-pod-&-stem-blight (15.0/0.0)
+(leaf-malf = present) and (leafspots-halo = absent) => class=2-4-d-injury (16.0/0.0)
+(seed-discolor = present) and (canker-lesion = tan) => class=purple-seed-stain (20.0/0.0)
+(leaf-malf = present) and (seed = norm) and (leafspot-size = gt-1/8) => class=phyllosticta-leaf-spot (10.0/0.0)
+(precip = lt-norm) and (date = june) => class=phyllosticta-leaf-spot (4.0/0.0)
+(precip = norm) and (leafspot-size = gt-1/8) and (plant-stand = lt-normal) and (seed-tmt = none) and (hail = yes) => class=phyllosticta-leaf-spot (4.0/0.0)
+(fruiting-bodies = present) and (fruit-spots = dna) => class=diaporthe-stem-canker (20.0/0.0)
+(leafspot-size = lt-1/8) and (leafspots-marg = w-s-marg) and (seed-size = norm) => class=bacterial-blight (21.0/1.0)
+(leaf-mild = upper-surf) => class=powdery-mildew (20.0/0.0)
+(leaf-mild = lower-surf) => class=downy-mildew (20.0/0.0)
+(int-discolor = black) => class=charcoal-rot (20.0/0.0)
+(stem-cankers = below-soil) and (canker-lesion = brown) => class=rhizoctonia-root-rot (20.0/0.0)
+(leafspot-size = lt-1/8) => class=bacterial-pustule (19.0/0.0)
+(fruit-spots = brown-w/blk-specks) and (leafspots-halo = absent) => class=anthracnose (38.0/0.0)
+(stem-cankers = above-soil) and (fruit-pods = norm) => class=anthracnose (5.0/0.0)
+(int-discolor = brown) => class=brown-stem-rot (44.0/0.0)
+(plant-growth = abnorm) and (canker-lesion = dk-brown-blk) => class=phytophthora-rot (88.0/0.0)
+(fruit-pods = diseased) => class=frog-eye-leaf-spot (66.0/2.0)
+(date = august) and (germination = 90-100) and (seed-tmt = fungicide) => class=frog-eye-leaf-spot (5.0/0.0)
+(date = august) and (seed-tmt = other) => class=frog-eye-leaf-spot (3.0/0.0)
+(temp = gt-norm) and (date = september) => class=alternarialeaf-spot (28.0/0.0)
+(severity = minor) and (leaf-shread = present) => class=alternarialeaf-spot (11.0/1.0)
+(date = august) and (stem = norm) => class=alternarialeaf-spot (23.0/6.0)
+(date = october) => class=alternarialeaf-spot (27.0/1.0)
+(crop-hist = diff-lst-year) and (precip = gt-norm) => class=alternarialeaf-spot (6.0/1.0)
+(date = september) and (crop-hist = same-lst-two-yrs) and (stem = norm) => class=alternarialeaf-spot (3.0/0.0)
+ => class=brown-spot (105.0/15.0)
+
+Number of Rules : 29
+
+
+Time taken to build model: 0.06 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances         630               92.2401 %
+Incorrectly Classified Instances        53                7.7599 %
+Kappa statistic                          0.9149
+Mean absolute error                      0.0112
+Root mean squared error                  0.0845
+Relative absolute error                 11.6076 %
+Root relative squared error             38.5483 %
+Total Number of Instances              683
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     diaporthe-stem-canker
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     charcoal-rot
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     rhizoctonia-root-rot
+                 1.000    0.002    0.989      1.000    0.994      0.994    0.999     0.986     phytophthora-rot
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     brown-stem-rot
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     powdery-mildew
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     downy-mildew
+                 0.902    0.034    0.806      0.902    0.851      0.828    0.968     0.843     brown-spot
+                 0.950    0.006    0.826      0.950    0.884      0.882    0.971     0.747     bacterial-blight
+                 0.800    0.000    1.000      0.800    0.889      0.892    0.917     0.834     bacterial-pustule
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     purple-seed-stain
+                 0.955    0.002    0.977      0.955    0.966      0.963    0.976     0.934     anthracnose
+                 0.650    0.011    0.650      0.650    0.650      0.639    0.955     0.576     phyllosticta-leaf-spot
+                 0.923    0.024    0.857      0.923    0.889      0.872    0.969     0.862     alternarialeaf-spot
+                 0.747    0.010    0.919      0.747    0.824      0.806    0.949     0.826     frog-eye-leaf-spot
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     diaporthe-pod-&-stem-blight
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     cyst-nematode
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     2-4-d-injury
+                 1.000    0.000    1.000      1.000    1.000      1.000    1.000     1.000     herbicide-injury
+Weighted Avg.    0.922    0.010    0.926      0.922    0.922      0.914    0.978     0.907
+
+=== Confusion Matrix ===
+
+  a  b  c  d  e  f  g  h  i  j  k  l  m  n  o  p  q  r  s   <-- classified as
+ 20  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 |  a = diaporthe-stem-canker
+  0 20  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 |  b = charcoal-rot
+  0  0 20  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 |  c = rhizoctonia-root-rot
+  0  0  0 88  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 |  d = phytophthora-rot
+  0  0  0  0 44  0  0  0  0  0  0  0  0  0  0  0  0  0  0 |  e = brown-stem-rot
+  0  0  0  0  0 20  0  0  0  0  0  0  0  0  0  0  0  0  0 |  f = powdery-mildew
+  0  0  0  0  0  0 20  0  0  0  0  0  0  0  0  0  0  0  0 |  g = downy-mildew
+  0  0  0  1  0  0  0 83  0  0  0  1  4  1  2  0  0  0  0 |  h = brown-spot
+  0  0  0  0  0  0  0  0 19  0  0  0  1  0  0  0  0  0  0 |  i = bacterial-blight
+  0  0  0  0  0  0  0  0  4 16  0  0  0  0  0  0  0  0  0 |  j = bacterial-pustule
+  0  0  0  0  0  0  0  0  0  0 20  0  0  0  0  0  0  0  0 |  k = purple-seed-stain
+  0  0  0  0  0  0  0  1  0  0  0 42  0  0  1  0  0  0  0 |  l = anthracnose
+  0  0  0  0  0  0  0  7  0  0  0  0 13  0  0  0  0  0  0 |  m = phyllosticta-leaf-spot
+  0  0  0  0  0  0  0  3  0  0  0  0  1 84  3  0  0  0  0 |  n = alternarialeaf-spot
+  0  0  0  0  0  0  0  9  0  0  0  0  1 13 68  0  0  0  0 |  o = frog-eye-leaf-spot
+  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 15  0  0  0 |  p = diaporthe-pod-&-stem-blight
+  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 14  0  0 |  q = cyst-nematode
+  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0 16  0 |  r = 2-4-d-injury
+  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  0  8 |  s = herbicide-injury
