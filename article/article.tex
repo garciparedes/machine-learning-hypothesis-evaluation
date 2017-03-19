@@ -117,12 +117,12 @@
 				\hline
 				\multicolumn{5}{ | c | }{Holdout $2/3,1/3$: Global } \\ \hline
 				Datos											& Algoritmo	 									& Tasa de Error	& Desviación Estandar	& Intervalos \\ \hline
-				\multirow{2}{*}{Labor} 		& J48 												& 0 		& 0 		& 0 		\\ \cline{2-5}
-																	& JRIP												&	0 		& 0 		& 0 		\\ \hline
-				\multirow{2}{*}{Soybean} 	& J48 												& 0 		& 0 		& 0 		\\ \cline{2-5}
-																	& JRIP												&	0 		& 0 		& 0			\\ \hline
-				\multirow{2}{*}{Vote} 		& J48 												& 0 		& 0 		& 0 		\\ \cline{2-5}
-																	& JRIP												&	0 		& 0 		& 0			\\
+				\multirow{2}{*}{Labor} 		& J48 												& $0.192982$ 		& $0.109561$ 					& $[0.008277,0.377686]$ \\ \cline{2-5}
+																	& JRIP												&	$0.157894$ 		& $0.052631$ 					& $[0.069165,0.246622]$ \\ \hline
+				\multirow{2}{*}{Soybean} 	& J48 												& $0.119253$ 		& $0.016318$ 					& $[0.091743,0.146762]$ \\ \cline{2-5}
+																	& JRIP												&	$0.089080$ 		& $0.023739$ 					& $[0.049059,0.129100]$	\\ \hline
+				\multirow{2}{*}{Vote} 		& J48 												& $0.065315$ 		& $0.014065$ 					& $[0.041603,0.089026]$ \\ \cline{2-5}
+																	& JRIP												&	$0.049549$ 		& $0.003901$ 					& $[0.042972,0.056125]$	\\
 				\hline
 			\end{tabular}
 			\caption{}
@@ -192,12 +192,12 @@
 				\hline
 				\multicolumn{3}{ | c | }{Validación Cruzada Repetida: Global} \\ \hline
 				Datos											& Algoritmo	& Tasa de Error \\ \hline
-				\multirow{2}{*}{Labor} 		& J48 			& 0 \\ \cline{2-3}
-																	& JRIP			&	0	\\ \hline
-				\multirow{2}{*}{Soybean} 	& J48 			& 0 \\ \cline{2-3}
-																	& JRIP			&	0	\\ \hline
-				\multirow{2}{*}{Vote} 		& J48 			& 0 \\ \cline{2-3}
-																	& JRIP			&	0	\\
+				\multirow{2}{*}{Labor} 		& J48 			& $0.25731$ \\ \cline{2-3}
+																	& JRIP			&	$0.152047$	\\ \hline
+				\multirow{2}{*}{Soybean} 	& J48 			& $0.089312$ \\ \cline{2-3}
+																	& JRIP			&	$0.079063$	\\ \hline
+				\multirow{2}{*}{Vote} 		& J48 			& $0.034483$ \\ \cline{2-3}
+																	& JRIP			&	$0.041379$	\\
 				\hline
 			\end{tabular}
 			\caption{}
@@ -216,8 +216,8 @@
 			\hline
 			\multicolumn{5}{ | c | }{Conjunto de Datos: Labor} \\ \hline
 			Algoritmo	&	Holdout 		& Holdout Repetido 	& Validación Cruzada 	& Validación Cruzada Repetida \\ \hline \hline
-			J48				&	$0.105263$	&	0									&	$0.263158$					&	0														\\ \hline
-			JRIP			& $0.105263$	&	0									&	$0.228070$					&	0														\\
+			J48				&	$0.105263$	&	$0.192982$				&	$0.263158$					&	$0.25731$										\\ \hline
+			JRIP			& $0.105263$	&	$0.157894$				&	$0.228070$					&	$0.152047$									\\
 			\hline
 			\end{tabular}
 			\caption{}
@@ -230,8 +230,8 @@
 			\hline
 			\multicolumn{5}{ | c | }{Conjunto de Datos: Soybean} \\ \hline
 			Algoritmo	&	Holdout 		& Holdout Repetido 	& Validación Cruzada 	& Validación Cruzada Repetida \\ \hline \hline
-			J48				&	$0.094828$	&	0									&	$0.084919$					&	0														\\ \hline
-			JRIP			& $0.086207$	&	0									&	$0.077599$					&	0														\\
+			J48				&	$0.094828$	&	$0.119253$				&	$0.084919$					&	$0.089312$									\\ \hline
+			JRIP			& $0.086207$	&	$0.089080$				&	$0.077599$					&	$0.079063$									\\
 			\hline
 			\end{tabular}
 			\caption{}
@@ -245,8 +245,8 @@
 			\hline
 			\multicolumn{5}{ | c | }{Conjunto de Datos: Vote} \\ \hline
 			Algoritmo	&	Holdout 		& Holdout Repetido 	& Validación Cruzada 	& Validación Cruzada Repetida \\ \hline \hline
-			J48				&	$0.027027$	&	0									&	$0.036782$ 					&	0														\\ \hline
-			JRIP			&	$0.033784$	&	0									&	$0.045977$					&	0														\\
+			J48				&	$0.027027$	&	$0.065315$				&	$0.036782$ 					&	$0.034483$									\\ \hline
+			JRIP			&	$0.033784$	&	$0.049549$				&	$0.045977$					&	$0.041379$									\\
 			\hline
 			\end{tabular}
 			\caption{}
