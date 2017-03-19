@@ -1,0 +1,67 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1
+Relation:     vote
+Instances:    435
+Attributes:   17
+              handicapped-infants
+              water-project-cost-sharing
+              adoption-of-the-budget-resolution
+              physician-fee-freeze
+              el-salvador-aid
+              religious-groups-in-schools
+              anti-satellite-test-ban
+              aid-to-nicaraguan-contras
+              mx-missile
+              immigration
+              synfuels-corporation-cutback
+              education-spending
+              superfund-right-to-sue
+              crime
+              duty-free-exports
+              export-administration-act-south-africa
+              Class
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(physician-fee-freeze = y) and (synfuels-corporation-cutback = n) => Class=republican (138.0/3.0)
+(physician-fee-freeze = y) and (export-administration-act-south-africa = y) => Class=republican (19.0/3.0)
+(physician-fee-freeze = y) and (adoption-of-the-budget-resolution = n) => Class=republican (16.0/4.0)
+ => Class=democrat (262.0/5.0)
+
+Number of Rules : 4
+
+
+Time taken to build model: 0.01 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances         143               96.6216 %
+Incorrectly Classified Instances         5                3.3784 %
+Kappa statistic                          0.9311
+Mean absolute error                      0.0807
+Root mean squared error                  0.1801
+Relative absolute error                 16.845  %
+Root relative squared error             36.3306 %
+Total Number of Instances              148
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.953    0.016    0.988      0.953    0.970      0.932    0.969     0.969     democrat
+                 0.984    0.047    0.938      0.984    0.961      0.932    0.969     0.930     republican
+Weighted Avg.    0.966    0.029    0.967      0.966    0.966      0.932    0.969     0.953
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 82  4 |  a = democrat
+  1 61 |  b = republican
