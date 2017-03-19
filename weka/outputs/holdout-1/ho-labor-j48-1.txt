@@ -1,0 +1,69 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     labor-neg-data
+Instances:    57
+Attributes:   17
+              duration
+              wage-increase-first-year
+              wage-increase-second-year
+              wage-increase-third-year
+              cost-of-living-adjustment
+              working-hours
+              pension
+              standby-pay
+              shift-differential
+              education-allowance
+              statutory-holidays
+              vacation
+              longterm-disability-assistance
+              contribution-to-dental-plan
+              bereavement-assistance
+              contribution-to-health-plan
+              class
+Test mode:    split 66.0% train, remainder test
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+wage-increase-first-year <= 2.5: bad (15.27/2.27)
+wage-increase-first-year > 2.5
+|   statutory-holidays <= 10: bad (10.77/4.77)
+|   statutory-holidays > 10: good (30.96/1.0)
+
+Number of Leaves  : 	3
+
+Size of the tree : 	5
+
+
+Time taken to build model: 0.02 seconds
+
+=== Evaluation on test split ===
+
+Time taken to test model on test split: 0 seconds
+
+=== Summary ===
+
+Correctly Classified Instances          17               89.4737 %
+Incorrectly Classified Instances         2               10.5263 %
+Kappa statistic                          0.7564
+Mean absolute error                      0.2381
+Root mean squared error                  0.3419
+Relative absolute error                 52.4444 %
+Root relative squared error             72.9745 %
+Total Number of Instances               19
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.833    0.077    0.833      0.833    0.833      0.756    0.814     0.725     bad
+                 0.923    0.167    0.923      0.923    0.923      0.756    0.814     0.865     good
+Weighted Avg.    0.895    0.138    0.895      0.895    0.895      0.756    0.814     0.821
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+  5  1 |  a = bad
+  1 12 |  b = good

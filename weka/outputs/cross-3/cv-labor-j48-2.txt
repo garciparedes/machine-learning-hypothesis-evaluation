@@ -1,0 +1,66 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.trees.J48 -C 0.25 -M 2
+Relation:     labor-neg-data
+Instances:    57
+Attributes:   17
+              duration
+              wage-increase-first-year
+              wage-increase-second-year
+              wage-increase-third-year
+              cost-of-living-adjustment
+              working-hours
+              pension
+              standby-pay
+              shift-differential
+              education-allowance
+              statutory-holidays
+              vacation
+              longterm-disability-assistance
+              contribution-to-dental-plan
+              bereavement-assistance
+              contribution-to-health-plan
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+J48 pruned tree
+------------------
+
+wage-increase-first-year <= 2.5: bad (15.27/2.27)
+wage-increase-first-year > 2.5
+|   statutory-holidays <= 10: bad (10.77/4.77)
+|   statutory-holidays > 10: good (30.96/1.0)
+
+Number of Leaves  : 	3
+
+Size of the tree : 	5
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          42               73.6842 %
+Incorrectly Classified Instances        15               26.3158 %
+Kappa statistic                          0.4415
+Mean absolute error                      0.3192
+Root mean squared error                  0.4669
+Relative absolute error                 69.7715 %
+Root relative squared error             97.7888 %
+Total Number of Instances               57
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.700    0.243    0.609      0.700    0.651      0.444    0.695     0.559     bad
+                 0.757    0.300    0.824      0.757    0.789      0.444    0.695     0.738     good
+Weighted Avg.    0.737    0.280    0.748      0.737    0.740      0.444    0.695     0.675
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 14  6 |  a = bad
+  9 28 |  b = good

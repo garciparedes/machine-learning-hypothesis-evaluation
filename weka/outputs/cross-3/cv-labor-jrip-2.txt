@@ -1,0 +1,64 @@
+=== Run information ===
+
+Scheme:       weka.classifiers.rules.JRip -F 3 -N 2.0 -O 2 -S 1
+Relation:     labor-neg-data
+Instances:    57
+Attributes:   17
+              duration
+              wage-increase-first-year
+              wage-increase-second-year
+              wage-increase-third-year
+              cost-of-living-adjustment
+              working-hours
+              pension
+              standby-pay
+              shift-differential
+              education-allowance
+              statutory-holidays
+              vacation
+              longterm-disability-assistance
+              contribution-to-dental-plan
+              bereavement-assistance
+              contribution-to-health-plan
+              class
+Test mode:    10-fold cross-validation
+
+=== Classifier model (full training set) ===
+
+JRIP rules:
+===========
+
+(wage-increase-first-year <= 2.5) => class=bad (15.0/2.0)
+(statutory-holidays <= 10) and (wage-increase-first-year <= 4) => class=bad (5.0/0.0)
+(longterm-disability-assistance = no) => class=bad (2.0/0.0)
+ => class=good (35.0/0.0)
+
+Number of Rules : 4
+
+
+Time taken to build model: 0 seconds
+
+=== Stratified cross-validation ===
+=== Summary ===
+
+Correctly Classified Instances          49               85.9649 %
+Incorrectly Classified Instances         8               14.0351 %
+Kappa statistic                          0.6771
+Mean absolute error                      0.149
+Root mean squared error                  0.3593
+Relative absolute error                 32.563  %
+Root relative squared error             75.2588 %
+Total Number of Instances               57
+
+=== Detailed Accuracy By Class ===
+
+                 TP Rate  FP Rate  Precision  Recall   F-Measure  MCC      ROC Area  PRC Area  Class
+                 0.700    0.054    0.875      0.700    0.778      0.686    0.895     0.856     bad
+                 0.946    0.300    0.854      0.946    0.897      0.686    0.895     0.908     good
+Weighted Avg.    0.860    0.214    0.861      0.860    0.855      0.686    0.895     0.890
+
+=== Confusion Matrix ===
+
+  a  b   <-- classified as
+ 14  6 |  a = bad
+  2 35 |  b = good
