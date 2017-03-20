@@ -19,7 +19,7 @@
 %-----------------------------
 
 	\begin{abstract}
-		\noindent [TODO ]
+		\noindent En este documento se realizarán experimentos sobre 3 conjuntos de datos utilizados para entrenar y verificar la tasa de error obtenida mediante distintas metodologías. Los algoritmos utilizados se basan en aprendizaje supervisado para la generación de árboles de decisión (\emph{J48}) y conjuntos de reglas(\emph{JRIP}) aplicado a tareas de clasificación.
 	\end{abstract}
 
 %-----------------------------
@@ -31,16 +31,23 @@
 	\label{sec:introducción}
 
 		\paragraph{}
-		[TODO ]
+		El motivo principal por el cual se realiza este conjunto de experimentos es la comparación de las distintas tasas de error mediante cada una de las técnicas, tratando de apreciar el sesgo que producen cada una de ellas, así como la variación que producen. Las técnicas que utilizadas han sido:\emph{Holdout $\tfrac{2}{3}/\tfrac{1}{3}$}, \emph{3 Repeticiones de Holdout $\tfrac{2}{3}/\tfrac{1}{3}$}, \emph{Validación Cruzada de 10 capas} y \emph{3 Repeticiones de Validación Cruzada de 10 capas}. Dichas metodologías experimentales se describirán en cada una de sus correspondientes secciones. A continuación se describen brevemente los algoritmos y conjuntos de datos utilizados para las labores experimentales.
+
+		\paragraph{}
+		Para la realización de los experimentos se ha utilizado la biblioteca \textbf{Weka}\cite{tool:weka}, que permite la realización de distintas tareas de entrenamiento así como verificación relacionadas con la \emph{minería de datos} y los \emph{algoritmos de aprendizaje automático} de manera sencilla.
 
 		\subsection{Algoritmos}
 
 			\paragraph{}
-			[TODO ]
+			Los algoritmos utilizados para las tareas de aprendizaje pertenecen a la categoría de \emph{Aprendizaje Inductivo Basado en el Error}. Ambos algoritmos se basan en \emph{Aprendizaje Supervisado}, es decir, en la fase de entrenamiento utilizan el valor de la clase de destino como medida del error, el cual tratan de reducir al máximo. Mediante dicha estrategia tratan de conseguir clasificar correctamente las instancias futuras.
 
 			\begin{itemize}
-				\item \textbf{J48}:
-				\item \textbf{JRIP}:
+				
+				\item \textbf{J48}: Es la implementación en Java de \emph{C4.5}, un método de generación de árboles de decisión basado en la \emph{Teoría de la Información}. En cada iteración trata de maximizar la ganancia de información producida tras cada partición con respecto de la clase de destino. Además, proporciona otras mejoras como \emph{poda de ramas} para evitar el sobreajuste, el uso de \emph{valores continuos} o el tratamiento de \emph{valores desconocidos}.
+
+
+				\item \textbf{JRIP}: Es la implementación en Java de \emph{RIPPER}, un método de aprendizaje supervisado basado en reglas cuyas siglas significan \say{\emph{Repeated Incremental Pruning to Produce Error Reduction}}, lo que puede entenderse como la eliminación de reglas que se cumplen con pocas instancias para reducir el sobreajuste producido en la fase de aprendizaje, que genera todo el conjunto de reglas posibles a partir de una determinada heurística.
+
 			\end{itemize}
 
 		\subsection{Conjuntos de Datos}
