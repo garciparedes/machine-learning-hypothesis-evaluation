@@ -76,7 +76,7 @@
 
 
 		\paragraph{}
-		[TODO Hablar sobre resultados]
+		Los resultados obtenidos tras realizar el experimento descrito en el párrafo anterior se muestran en la tabla \ref{table:holdout-1-results}. En el caso del conjunto de datos \emph{Labor}, ambos algoritmos obtienen la misma tasa de error. Para los conjuntos de datos \emph{Soybean} y \emph{Vote} los resultados también son muy similares, por lo que no podemos decir a partir de estos resultados los algoritmos sean significativamente diferentes.
 
 		\begin{table}[h]
 			\centering
@@ -105,7 +105,7 @@
 		El método de \emph{Holdout repetido} consiste en realizar las mismas tareas que el descrito anteriormente, pero en este caso realiza la misma tarea durante un determinado número de veces. La razón de ello es tratar de minimizar la varianza de la tasa de error promediando los resultados de cada una de las repeticiones. En este caso se ha decidido realizar \emph{3 repeticiones} variando la semilla utilizada para cada uno de los experimentos de \emph{Holdout}. El tamaño de las particiones, al igual que en el caso anterior, ha sido de $\tfrac{2}{3}$ para entrenamiento y $\tfrac{1}{3}$ para test.
 
 		\paragraph{}
-		[TODO Hablar sobre resultados]
+		En este caso, los resultados se muestran en la tabla \ref{table:holdout-3-results}. Debido a la repetición del experimento, en este caso se pueden ver variaciones en las tasas de error respecto de la semilla escogida, algo que se comentará en la siguiente sección.
 
 		\begin{table}[h]
 			\centering
@@ -130,7 +130,7 @@
 	\label{sec:e3}
 
 		\paragraph{}
-		En este ejercicio se realizan las tareas de promediación así como del cálculo de la desviación típica y los intervalos de confianza correspondientes a los resultados del ejercicio \ref{sec:e2}.
+		En esta sección se realizan las tareas de promediación así como del cálculo de la desviación típica y los intervalos de confianza correspondientes a los resultados de la sección \ref{sec:e2}.
 
 		\paragraph{}
 		En el caso del cálculo de la esperanza, se ha seguido la definición de la ecuación \eqref{eq:holdout-E}, la cual se define como la media aritmética del error.
@@ -158,7 +158,7 @@
 		\end{equation}
 
 		\paragraph{}
-		[TODO Hablar sobre resultados]
+		Los resultados de aplicar las operaciones descritas sobre los resultados de la sección anterior se muestran en la tabla \ref{table:holdout-3-results-global}. Tal y como se puede apreciar, el algoritmo \emph{J48} tiene una tasa de error mayor que \emph{JRIP} en promedio para los experimentos realizados.
 
 		\begin{table}[h]
 			\centering
@@ -185,7 +185,7 @@
 		El método de particionamiento mediante \emph{Validación Cruzada} trata de mejorar los resultados obtenidos mediante \emph{Holdout} respecto del grado de precisión de la tasa de error. Para ello divide el conjunto de datos en $k$ particiones de igual tamaño para después realizar $k$ experimentos utilizando cada vez una de las particiones como conjunto de test y el resto como conjunto de entrenamiento. Posteriormente se promedian los resultados de cada uno de los experimentos para obtener el resultado final. Con esto se consigue un menor sesgo a costa de un mayor coste computacional para la estimación. En este caso se ha escogido $k = 10$ particiones para el experimento de \emph{Validación Cruzada}.
 
 		\paragraph{}
-		[TODO Hablar sobre resultados]
+		Los resultados obtenidos tras realizar el experimento del párrafo anterior se muestran en la tabla \ref{table:cross-validation-1-results}. Como vemos, tienen una tendencia similar a los obtenidos en la sección \ref{sec:e1}. Posteriormente (en última sección) se comentarán las variaciones en los resultados dependientes de la metodología experimental utilzada.
 
 		\begin{table}[h]
 			\centering
@@ -210,10 +210,10 @@
 	\label{sec:e5}
 
 		\paragraph{}
-		La \emph{Validación Cruzada Repetida} consiste, al igual que el \emph{Holdout repetido}, en realizar varios experimentos con distintas semillas para después promediar los resultados tal y como se hará en el ejercicio siguiente.
+		La \emph{Validación Cruzada Repetida} consiste, al igual que el \emph{Holdout repetido}, en realizar varios experimentos con distintas semillas para después promediar los resultados tal y como se hará en la siguiente sección.
 
 		\paragraph{}
-		[TODO Hablar sobre resultados]
+		Los resultados obtenidos tras la realización del experimento de \emph{Validación Cruzada Repetida} variando la semilla de particionamiento se muestran en la tabla \ref{table:cross-validation-3-results}. Como vemos, en este caso la desviación típica entre los resultados es mucho menor que en el caso de \emph{Holdout Repetido} de la sección \ref{sec:e3}.
 
 		\begin{table}[h]
 			\centering
@@ -235,7 +235,7 @@
 		\end{table}
 
 
-	\section{Sobre los resultados calculados en la sección \ref{sec:e5} determinarla tasa de error}
+	\section{Sobre los resultados calculados en la sección \ref{sec:e5} determinar la tasa de error}
 	\label{sec:e6}
 
 		\paragraph{}
@@ -247,7 +247,7 @@
 		\end{equation}
 
 		\paragraph{}
-		[TODO Hablar sobre resultados]
+		En la tabla \ref{table:cross-validation-3-results-global} se muestran los resultados de promediar las tasas de error obtenidas en la sección anterior. Tal y como se ha comentado anteriormente, mediante la técnica de repetición el sesgo producido al realizar la metodología experimental es mucho menor en este caso con respecto a la \emph{Validación Cruzada} de una única repetición.
 
 		\begin{table}[h]
 			\centering
