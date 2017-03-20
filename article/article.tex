@@ -93,8 +93,8 @@
 																	& JRIP												&	$0.033784$					\\
 				\hline
 			\end{tabular}
-			\caption{}
-			\label{}
+			\caption{Tasas de Error mediante la metodología experimental \emph{Holdout $2/3,1/3$}}
+			\label{table:holdout-1-results}
 		\end{table}
 
 
@@ -122,8 +122,8 @@
 																	& JRIP												&	$0.054054$ & $0.047297$ & $0.047297$	\\
 				\hline
 			\end{tabular}
-			\caption{}
-			\label{}
+			\caption{Tasas de Error mediante la metodología experimental \emph{Holdout $2/3,1/3$ Repetido}}
+			\label{table:holdout-3-results}
 		\end{table}
 
 	\section{Sobre los resultados calculados en la sección \ref{sec:e2} determinarla tasa de error, la varianza y el intervalo de confianza del $95\%$}
@@ -174,8 +174,8 @@
 																	& JRIP												&	$0.049549$ 		& $0.003901$ 					& $[0.042972,0.056125]$	\\
 				\hline
 			\end{tabular}
-			\caption{}
-			\label{}
+			\caption{Tasas de Error Global mediante la metodología experimental \emph{Holdout $2/3,1/3$ Repetido}}
+			\label{table:holdout-3-results-global}
 		\end{table}
 
 	\section{Realizar un experimento de validación cruzada de $10$ particiones, calculando la tasa de error}
@@ -191,7 +191,7 @@
 			\centering
 			\begin{tabular}{ | c | c | c | }
 				\hline
-				\multicolumn{3}{ | c | }{Validación Cruzada} \\ \hline
+				\multicolumn{3}{ | c | }{Validación Cruzada de 10 capas} \\ \hline
 				\multirow{2}{*}{Datos}		&\multirow{2}{*}{Algoritmo}	 	& Tasa de Error 		\\ \cline{3-3}
 																	&  														& $\text{Semilla}_1$\\ \hline
 				\multirow{2}{*}{Labor} 		& J48 												& $0.263158$ 				\\ \cline{2-3}
@@ -202,8 +202,8 @@
 																	& JRIP												&	$0.045977$					\\
 				\hline
 			\end{tabular}
-			\caption{}
-			\label{}
+			\caption{Tasas de Error mediante la metodología experimental \emph{Validación Cruzada de 10 capas}}
+			\label{table:cross-validation-1-results}
 		\end{table}
 
 	\section{Realizar tres experimentos de validación cruzada de $10$ particiones, anotando la tasa de error}
@@ -219,7 +219,7 @@
 			\centering
 			\begin{tabular}{ | c | c | c | c | c | }
 				\hline
-				\multicolumn{5}{ | c | }{Validación Cruzada Repetida} \\ \hline
+				\multicolumn{5}{ | c | }{Validación Cruzada de 10 capas Repetida} \\ \hline
 				\multirow{2}{*}{Datos}		&\multirow{2}{*}{Algoritmo}	& \multicolumn{3}{ c |}{Tasa de Error} \\ \cline{3-5}
 				 													&  													& $\text{Semilla}_2$	& $\text{Semilla}_3$	& $\text{Semilla}_4$ \\ \hline
 				\multirow{2}{*}{Labor} 		& J48 											& $0.263158$ & $0.263158$ & $0.245614$ \\ \cline{2-5}
@@ -230,8 +230,8 @@
 																	& JRIP											&	$0.043678$ & $0.041379$ & $0.03908$		\\
 				\hline
 			\end{tabular}
-			\caption{}
-			\label{}
+			\caption{Tasas de Error mediante la metodología experimental \emph{Validación Cruzada de 10 capas Repetida}}
+			\label{table:cross-validation-3-results}
 		\end{table}
 
 
@@ -263,8 +263,8 @@
 																	& JRIP			&	$0.041379$	\\
 				\hline
 			\end{tabular}
-			\caption{}
-			\label{}
+			\caption{Tasas de Error Global mediante la metodología experimental \emph{Validación Cruzada de 10 capas Repetida}}
+			\label{table:cross-validation-3-results-global}
 		\end{table}
 
 	\section{Conclusiones}
@@ -289,8 +289,8 @@
 				JRIP			& $0.105263$	&	$0.157894$				&	$0.228070$					&	$0.152047$									\\
 				\hline
 				\end{tabular}
-				\caption{}
-				\label{}
+				\caption{Resultados de la distintas Metodologías Experimentales para el conjunto de datos \emph{Labor}}
+				\label{table:data-set-labor-results}
 			\end{table}
 
 		\subsection{Soybean}
@@ -309,8 +309,8 @@
 				JRIP			& $0.086207$	&	$0.089080$				&	$0.077599$					&	$0.079063$									\\
 				\hline
 				\end{tabular}
-				\caption{}
-				\label{}
+				\caption{Resultados de la distintas Metodologías Experimentales para el conjunto de datos \emph{Soybean}}
+				\label{table:data-set-soybean-results}
 			\end{table}
 
 		\subsection{Vote}
@@ -329,8 +329,8 @@
 				JRIP			&	$0.033784$	&	$0.049549$				&	$0.045977$					&	$0.041379$									\\
 				\hline
 				\end{tabular}
-				\caption{}
-				\label{}
+				\caption{Resultados de la distintas Metodologías Experimentales para el conjunto de datos \emph{Vote}}
+				\label{table:data-set-vote-results}
 			\end{table}
 
 %-----------------------------
