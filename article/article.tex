@@ -182,7 +182,10 @@
 	\label{sec:e4}
 
 		\paragraph{}
-		[TODO ]
+		El método de particionamiento mediante \emph{Validación Cruzada} trata de mejorar los resultados obtenidos mediante \emph{Holdout} respecto del grado de precisión de la tasa de error. Para ello divide el conjunto de datos en $k$ particiones de igual tamaño para después realizar $k$ experimentos utilizando cada vez una de las particiones como conjunto de test y el resto como conjunto de entrenamiento. Posteriormente se promedian los resultados de cada uno de los experimentos para obtener el resultado final. Con esto se consigue un menor sesgo a costa de un mayor coste computacional para la estimación. En este caso se ha escogido $k = 10$ particiones para el experimento de \emph{Validación Cruzada}.
+
+		\paragraph{}
+		[TODO Hablar sobre resultados]
 
 		\begin{table}[h]
 			\centering
@@ -207,7 +210,10 @@
 	\label{sec:e5}
 
 		\paragraph{}
-		[TODO ]
+		La \emph{Validación Cruzada Repetida} consiste, al igual que el \emph{Holdout repetido}, en realizar varios experimentos con distintas semillas para después promediar los resultados tal y como se hará en el ejercicio siguiente.
+
+		\paragraph{}
+		[TODO Hablar sobre resultados]
 
 		\begin{table}[h]
 			\centering
@@ -233,7 +239,15 @@
 	\label{sec:e6}
 
 		\paragraph{}
-		[TODO ]
+		La ecuación utilizada para el cálculo de la experanza, en este caso ha sido \eqref{eq:cross-validation-E}. Puesto que los resultados que se muestran en la tabla de resultado ya han sido promediados respecto de cada una de sus particiones, no es dificil comprobar que la esperanza global puede obtener mediante una simple media aritmética de los mismos, tal y como sucede en el caso del \emph{Holdout Repetido} y la ecuación \eqref{eq:holdout-E}.
+
+		\begin{equation}
+		\label{eq:cross-validation-E}
+			e(h) = \frac{\sum_{i=1}^{R*k}e_i(h)}{R*k}
+		\end{equation}
+
+		\paragraph{}
+		[TODO Hablar sobre resultados]
 
 		\begin{table}[h]
 			\centering
@@ -257,50 +271,67 @@
 	\label{sec:conclusions}
 
 		\paragraph{}
-		[TODO ]
+		A continuación se muestran los resultados referidos a las tasas de error obtenidas a través de cada una de las metodologías experimentales agrupadas por conjuntos de datos. Además, se describe un breve comentario acerca de cada uno de los resultados.
 
-		\begin{table}[h]
-			\centering
-			\begin{tabular}{ | c || c | c | c | c |}
-			\hline
-			\multicolumn{5}{ | c | }{Conjunto de Datos: Labor} \\ \hline
-			Algoritmo	&	Holdout 		& Holdout Repetido 	& Validación Cruzada 	& Validación Cruzada Repetida \\ \hline \hline
-			J48				&	$0.105263$	&	$0.192982$				&	$0.263158$					&	$0.25731$										\\ \hline
-			JRIP			& $0.105263$	&	$0.157894$				&	$0.228070$					&	$0.152047$									\\
-			\hline
-			\end{tabular}
-			\caption{}
-			\label{}
-		\end{table}
+		\subsection{Labor}
+		\label{sec:conclusions-labor}
 
-		\begin{table}[h]
-			\centering
-			\begin{tabular}{ | c || c | c | c | c |}
-			\hline
-			\multicolumn{5}{ | c | }{Conjunto de Datos: Soybean} \\ \hline
-			Algoritmo	&	Holdout 		& Holdout Repetido 	& Validación Cruzada 	& Validación Cruzada Repetida \\ \hline \hline
-			J48				&	$0.094828$	&	$0.119253$				&	$0.084919$					&	$0.089312$									\\ \hline
-			JRIP			& $0.086207$	&	$0.089080$				&	$0.077599$					&	$0.079063$									\\
-			\hline
-			\end{tabular}
-			\caption{}
-			\label{}
-		\end{table}
+			\paragraph{}
+			[TODO Hablar sobre resultados]
 
+			\begin{table}[h]
+				\centering
+				\begin{tabular}{ | c || c | c | c | c |}
+				\hline
+				\multicolumn{5}{ | c | }{Conjunto de Datos: Labor} \\ \hline
+				Algoritmo	&	Holdout 		& Holdout Repetido 	& Validación Cruzada 	& Validación Cruzada Repetida \\ \hline \hline
+				J48				&	$0.105263$	&	$0.192982$				&	$0.263158$					&	$0.25731$										\\ \hline
+				JRIP			& $0.105263$	&	$0.157894$				&	$0.228070$					&	$0.152047$									\\
+				\hline
+				\end{tabular}
+				\caption{}
+				\label{}
+			\end{table}
 
-		\begin{table}[h]
-			\centering
-			\begin{tabular}{ | c || c | c | c | c |}
-			\hline
-			\multicolumn{5}{ | c | }{Conjunto de Datos: Vote} \\ \hline
-			Algoritmo	&	Holdout 		& Holdout Repetido 	& Validación Cruzada 	& Validación Cruzada Repetida \\ \hline \hline
-			J48				&	$0.027027$	&	$0.065315$				&	$0.036782$ 					&	$0.034483$									\\ \hline
-			JRIP			&	$0.033784$	&	$0.049549$				&	$0.045977$					&	$0.041379$									\\
-			\hline
-			\end{tabular}
-			\caption{}
-			\label{}
-		\end{table}
+		\subsection{Soybean}
+		\label{sec:conclusions-soybean}
+
+			\paragraph{}
+			[TODO Hablar sobre resultados]
+
+			\begin{table}[h]
+				\centering
+				\begin{tabular}{ | c || c | c | c | c |}
+				\hline
+				\multicolumn{5}{ | c | }{Conjunto de Datos: Soybean} \\ \hline
+				Algoritmo	&	Holdout 		& Holdout Repetido 	& Validación Cruzada 	& Validación Cruzada Repetida \\ \hline \hline
+				J48				&	$0.094828$	&	$0.119253$				&	$0.084919$					&	$0.089312$									\\ \hline
+				JRIP			& $0.086207$	&	$0.089080$				&	$0.077599$					&	$0.079063$									\\
+				\hline
+				\end{tabular}
+				\caption{}
+				\label{}
+			\end{table}
+
+		\subsection{Vote}
+		\label{sec:conclusions-vote}
+
+			\paragraph{}
+			[TODO Hablar sobre resultados]
+
+			\begin{table}[h]
+				\centering
+				\begin{tabular}{ | c || c | c | c | c |}
+				\hline
+				\multicolumn{5}{ | c | }{Conjunto de Datos: Vote} \\ \hline
+				Algoritmo	&	Holdout 		& Holdout Repetido 	& Validación Cruzada 	& Validación Cruzada Repetida \\ \hline \hline
+				J48				&	$0.027027$	&	$0.065315$				&	$0.036782$ 					&	$0.034483$									\\ \hline
+				JRIP			&	$0.033784$	&	$0.049549$				&	$0.045977$					&	$0.041379$									\\
+				\hline
+				\end{tabular}
+				\caption{}
+				\label{}
+			\end{table}
 
 %-----------------------------
 %	Bibliographic references
