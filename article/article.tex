@@ -42,7 +42,7 @@
 			Los algoritmos utilizados para las tareas de aprendizaje pertenecen a la categoría de \emph{Aprendizaje Inductivo Basado en el Error}. Ambos algoritmos se basan en \emph{Aprendizaje Supervisado}, es decir, en la fase de entrenamiento utilizan el valor de la clase de destino como medida del error, el cual tratan de reducir al máximo. Mediante dicha estrategia tratan de conseguir clasificar correctamente las instancias futuras.
 
 			\begin{itemize}
-				
+
 				\item \textbf{J48}: Es la implementación en Java de \emph{C4.5}, un método de generación de árboles de decisión basado en la \emph{Teoría de la Información}. En cada iteración trata de maximizar la ganancia de información producida tras cada partición con respecto de la clase de destino. Además, proporciona otras mejoras como \emph{poda de ramas} para evitar el sobreajuste, el uso de \emph{valores continuos} o el tratamiento de \emph{valores desconocidos}.
 
 
@@ -53,13 +53,20 @@
 		\subsection{Conjuntos de Datos}
 
 			\paragraph{}
-			[TODO ]
+			Se han utilizado \textbf{3} conjuntos de datos en los experimentos realizados. Estos se describen brevemente a continuación:
 
 			\begin{itemize}
-				\item \textbf{Labor}\cite{dataset:labor}:
-				\item \textbf{Soybean}\cite{dataset:soybean}:
-				\item \textbf{Vote}\cite{dataset:vote}:
+
+				\item \textbf{Labor}\cite{dataset:labor}: Está formado por \emph{57 instancias} formadas por \emph{16 atributos} de los cuales, 8 de ellos son de tipo numérico mientras que el resto son de carácter nominal. La clase de destino puede tomar \emph{2 valores} distintos. El conjunto de datos se corresponde con resultados de negociaciones industriales en Canadá.
+
+				\item \textbf{Soybean}\cite{dataset:soybean}: Está formado por \emph{683 instancias} formadas por \emph{35 atributos}, todos ellos de carácter nominal. La clase de destino puede tomar \emph{19 valores} distintos. El conjunto de datos se corresponde con instancias referidas a atributos de plantas y la clase de destino representa el tipo de planta.
+
+				\item \textbf{Vote}\cite{dataset:vote}: Está formado por \emph{435 instancias} formadas por \emph{16 atributos}, todos ellos de carácter nominal. La clase de destino puede tomar \emph{2 valores} distintos. El conjunto de datos se refiere a resultados de encuestas a ciudadanos estadounidenses para tratar de predecir si votarán al partido demócrata o republicano.
+
 			\end{itemize}
+
+		\paragraph{}
+		En las siguientes secciones se describen los experimentos realizados así como los resultados obtenidos en cada caso junto con una discusión acerca de los mismos.
 
 	\section{Realizar un experimento aplicando Holdout $\tfrac{2}{3}/\tfrac{1}{3}$}
 	\label{sec:e1}
